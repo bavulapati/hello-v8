@@ -35,7 +35,3 @@ cmake --build build
 ```
 ./build/logger script.js
 ```
-
-```
-
-```

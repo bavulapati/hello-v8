@@ -1,11 +1,5 @@
 #include "libplatform/libplatform.h"
-#include "v8-context.h"
-#include "v8-initialization.h"
-#include "v8-isolate.h"
-#include "v8-local-handle.h"
-#include "v8-primitive.h"
-#include "v8-script.h"
-#include "v8-value.h"
+#include "v8.h"
 #include <cstdio>
 #include <fstream>
 #include <iostream>
@@ -13,7 +7,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
-#include <v8.h>
 
 // C++ function exposed to JavaScript
 void PrintFunction(const v8::FunctionCallbackInfo<v8::Value> &args) {

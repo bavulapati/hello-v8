@@ -35,3 +35,7 @@ cmake --build build
 ```
 ./build/logger script.js
 ```
+
+## References
+
+- `V8` [documentation](https://v8.dev/docs/embed)

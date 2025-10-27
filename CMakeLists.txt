@@ -42,3 +42,40 @@ target_compile_definitions(logger
 )
 
 target_link_libraries(logger ${V8_LIBS})
+
+add_executable(uv_hello)
+target_sources(uv_hello
+  PRIVATE
+    libuv/helloworld.c
+)
+find_package(UV REQUIRED)
+target_link_libraries(uv_hello ${UV_LIBS})
+
+add_executable(uv_default_loop)
+target_sources(uv_default_loop
+  PRIVATE
+    libuv/default-loop.c
+)
+target_link_libraries(uv_default_loop ${UV_LIBS})
+
+add_executable(uv_ref_timer)
+target_sources(uv_ref_timer
+  PRIVATE
+    libuv/ref-timer.c
+)
+target_link_libraries(uv_ref_timer ${UV_LIBS})
+
+add_executable(uv_idle_compute)
+target_sources(uv_idle_compute
+  PRIVATE
+    libuv/idle-compute.c
+)
+target_link_libraries(uv_idle_compute ${UV_LIBS})
+
+
+add_executable(uv_idle_basic)
+target_sources(uv_idle_basic
+  PRIVATE
+    libuv/idle-basic.c
+)
+target_link_libraries(uv_idle_basic ${UV_LIBS})
